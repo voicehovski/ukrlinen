@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+		Зачем это надо?
+	Для возможности выбора вида компонента в качестве пункта меню, такой
+	файл следует разместить в соответствующей директории tmpl вида
+	
+	Данный файл может содержать имя и описание компонента (будут отображаться
+	при выборе типа меню, а также в панели управления меню), а также объявления
+	параметров, которые мы хотим включить в панель управления меню (отображаются
+	в правой колонке)
+	
+	Текстовые константы, используемые в панели управления меню следует включить в
+	языковой файл .ini, а константы, используемые при выборе и в списке меню - в
+	файл .sys.ini административной части. При этом они могут дублироваться - это нормально.
+-->
+<metadata>
+	<layout title="COM_ORANGEEI_VIEW_ORANGEEI_TITLE">
+		<message>
+			<![CDATA[COM_ORANGEEI_VIEW_ORANGEEI_DESC]]>
+		</message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request">
+			<field
+				name="id"	
+				type="list"
+				label="COM_ORANGEEI_FIELDID_FILETYPE_LABEL"
+				description="COM_ORANGEEI_FIELDID_FILETYPE_DESC"
+				default="1"
+			>
+				<option value="1">Text [.csv]</option>
+				<option value="2">MS Excel [.xls]</option>
+				<option value="3">Open Office [.odt]</option>
+
+			</field>
+		</fieldset>
+	</fields>
+</metadata>
