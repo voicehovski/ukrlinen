@@ -1,6 +1,67 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<extension type="component" version="3.0.0" method="upgrade">
-	<!-- There are confusing rules of naming. One should understand. -->
+<extension type="component" version="3.2.0" method="upgrade">
 	<name>Orange ei</name>
+	<creationDate>January 2017</creationDate>
+	<author>Evgene K</author>
+	<authorEmail>makethedog@gmail.com</authorEmail>
+	<authorUrl>http://www.example.org</authorUrl>
+	<copyright>Copyright Info</copyright>
+	<license>License Info</license>
+	<!--  The version string is recorded in the components table -->
+	<version>0.0.1</version>	<!-- The description is optional and defaults to the name -->
+	<description>Component for import and export</description>
+ 
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<update> <!-- Runs on update; New since J2.5 -->
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+ 
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>orangeei.php</filename>
+		<filename>controller.php</filename>
+		<folder>views</folder>
+		<folder>models</folder>
+	</files>
+	
+	<languages folder="site/language">
+		<language tag="en-GB">ru-RU/ru-RU.com_orangeei.ini</language>
+	</languages>
+ 
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu link='index.php?option=com_orangeei'>Orange EI</menu>
+
+		<files folder="admin">
+			<!-- Admin Main File Copy Section -->
+			<filename>index.html</filename>
+			<filename>orangeei.php</filename>
+			<filename>controller.php</filename>			<!-- SQL files section -->
+			<folder>sql</folder>
+			<!-- tables files section -->
+			<folder>tables</folder>
+			<!-- models files section -->
+			<folder>models</folder>
+			<!-- views files section -->
+			<folder>views</folder>
+		</files>
+		
+		<languages folder="admin/language">
+			<language tag="en-GB">ru-RU/ru-RU.com_orangeei.ini</language>
+			<language tag="en-GB">ru-RU/ru-RU.com_orangeei.sys.ini</language>
+		</languages>
+	</administration>
+ 
 </extension>
