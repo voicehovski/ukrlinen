@@ -25,7 +25,9 @@ class OrangeEIViewOrangeEIDefault extends JViewLegacy
  
 			return false;
 		}
- 
+
+		$this->addToolBar (  );
+		
 		// Display the template
 		parent::display($tpl);
 	}
@@ -36,8 +38,8 @@ class OrangeEIViewOrangeEIDefault extends JViewLegacy
 	*/
 	protected function addToolBar (  ) {
 		JToolBarHelper::title(JText::_('COM_ORANGEEI_MANAGER_ORANGEEI_DEFAULT'));
-		JToolBarHelper::addNew('helloworld.add');
-		JToolBarHelper::editList('helloworld.edit');
-		JToolBarHelper::deleteList('', 'helloworlds.delete');
+		JToolBarHelper::addNew('orangeei.add');
+		JToolBarHelper::editList('orangeei.edit');
+		JToolBarHelper::deleteList('', 'orangeeidefault.delete');
 	}
 }

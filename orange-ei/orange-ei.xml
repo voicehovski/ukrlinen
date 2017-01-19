@@ -9,7 +9,7 @@
 	<copyright>Copyright Info</copyright>
 	<license>License Info</license>
 	<!--  The version string is recorded in the components table -->
-	<version>0.0.1</version>	<!-- The description is optional and defaults to the name -->
+	<version>0.0.2</version>	<!-- The description is optional and defaults to the name -->
 	<description>Component for import and export</description>
  
 	<install> <!-- Runs on install -->
@@ -56,6 +56,7 @@
 			<folder>models</folder>
 			<!-- views files section -->
 			<folder>views</folder>
+			<folder>controllers</folder>
 		</files>
 		
 		<languages folder="admin/language">

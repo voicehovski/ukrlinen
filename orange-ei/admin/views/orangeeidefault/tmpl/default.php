@@ -42,7 +42,7 @@ defined('_JEXEC') or die('Restricted Access');
 		<tbody>
 			<?php if (!empty($this->items)) : ?>
 				<?php foreach ($this->items as $i => $row) : 
-					$link = JRoute::_('index.php?option=com_orangeei&task=horangeie.edit&id=' . $row->id);
+					$link = JRoute::_('index.php?option=com_orangeei&task=orangeei.edit&id=' . $row->id);
 				?>
  
 					<tr>

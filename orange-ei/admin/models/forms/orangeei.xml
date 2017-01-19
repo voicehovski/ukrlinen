@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+				name="id"
+				type="hidden"
+				/>
+		<field
+				name="profile"
+				type="text"
+				label="COM_ORANGEEI_ORANGEEI_PROFILE_LABEL"
+				description="COM_ORANGEEI_ORANGEEI_PROFILE_DESC"
+				size="40"
+				class="inputbox"
+				default=""
+				/>
+		<field
+				name="options"
+				type="text"
+				label="COM_ORANGEEI_ORANGEEI_OPTIONS_LABEL"
+				description="COM_ORANGEEI_ORANGEEI_OPTIONS_DESC"
+				size="64"
+				class="inputbox"
+				default=""
+				/>
+	</fieldset>
+</form>
