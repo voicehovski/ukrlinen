@@ -9,7 +9,7 @@
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
  
-class OrangeEIControllerOrangeEIDefault extends JControllerAdmin
+class OrangeEIControllerOrangeEIs extends JControllerAdmin
 {
 	public function getModel($name = 'OrangeEI', $prefix = 'OrangeEIModel', $config = array('ignore_request' => true))
 	{

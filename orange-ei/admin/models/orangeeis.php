@@ -9,7 +9,7 @@
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 
-class OrangeEIModelOrangeEIDefault extends JModelList
+class OrangeEIModelOrangeEIs extends JModelList
 {
 	protected function getListQuery()
 	{

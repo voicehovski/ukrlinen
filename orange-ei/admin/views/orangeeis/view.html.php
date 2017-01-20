@@ -10,7 +10,7 @@
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
  
-class OrangeEIViewOrangeEIDefault extends JViewLegacy
+class OrangeEIViewOrangeEIs extends JViewLegacy
 {
 	function display($tpl = null)
 	{
@@ -37,9 +37,9 @@ class OrangeEIViewOrangeEIDefault extends JViewLegacy
 		\administrator\includes\toolbar.php
 	*/
 	protected function addToolBar (  ) {
-		JToolBarHelper::title(JText::_('COM_ORANGEEI_MANAGER_ORANGEEI_DEFAULT'));
+		JToolBarHelper::title(JText::_('COM_ORANGEEI_MANAGER_ORANGEEIS'));
 		JToolBarHelper::addNew('orangeei.add');
 		JToolBarHelper::editList('orangeei.edit');
-		JToolBarHelper::deleteList('', 'orangeeidefault.delete');
+		JToolBarHelper::deleteList('', 'orangeeis.delete');
 	}
 }

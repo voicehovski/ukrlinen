@@ -18,5 +18,5 @@ defined('_JEXEC') or die('Restricted access');
  */
 class OrangeEIController extends JControllerLegacy
 {
-	protected $default_view = 'orangeeidefault';
+	protected $default_view = 'orangeeis';
 }
