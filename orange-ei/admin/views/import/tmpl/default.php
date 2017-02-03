@@ -10,16 +10,13 @@
 // No direct access
 defined('_JEXEC') or die('Restricted access');
 
-// smart-comment
-//Видимо оно должно называться edit, поскольку в списке (orangeeis) и его тулбаре мы указываем задачу edit
-//Видимо itemid автоматически используется методом getItem соответствующей модели
-
 ?>
-<form action="<?php echo JRoute::_('index.php?option=com_orangeei&layout=edit&id=' . (int) $this->item->id); ?>"
+<div><?php echo $this->smth ?></div>
+<form action="<?php echo JRoute::_('index.php?option=com_orangeei&layout=result&id=' . (int) $this->item->id); ?>"
     method="post" name="adminForm" id="adminForm">
     <div class="form-horizontal">
         <fieldset class="adminform">
-            <legend><?php echo JText::_('COM_ORANGEEI_ORANGEEI_DETAILS'); ?></legend>
+            <legend><?php echo JText::_('COM_ORANGEEI_ORANGEIMPORT_DETAILS'); ?></legend>
             <div class="row-fluid">
                 <div class="span6">
                     <?php foreach ($this->form->getFieldset() as $field): ?>
@@ -32,6 +29,6 @@ defined('_JEXEC') or die('Restricted access');
             </div>
         </fieldset>
     </div>
-    <input type="hidden" name="task" value="orangeei.edit" />
+    <input type="hidden" name="task" value="orangeimport.display" />
     <?php echo JHtml::_('form.token'); ?>
 </form>

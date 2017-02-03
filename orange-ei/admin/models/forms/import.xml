@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<!-- Типы полей смотрим в https://docs.joomla.org/Standard_form_field_types -->
+		<field
+				name="id"
+				type="hidden"
+				/>
+		<field
+				name="import_file"
+				type="file"
+				label="COM_ORANGEEI_ORANGEIMPORT_FILE_LABEL"
+				description="COM_ORANGEEI_ORANGEIMPORT_FILE_DESC"
+				size="64"
+				class="inputbox"
+				default=""
+				/>
+		<field
+				name="options"
+				type="text"
+				label="COM_ORANGEEI_ORANGEIMPORT_OPTIONS_LABEL"
+				description="COM_ORANGEEI_ORANGEIMPORT_OPTIONS_DESC"
+				size="64"
+				class="inputbox"
+				default=""
+				/>
+	</fieldset>
+</form>

@@ -11,10 +11,10 @@
 defined('_JEXEC') or die('Restricted access');
  
 /**
- * General Controller of OrangeEI component
+ * Это общий контроллер который будет вызван если параметр запроса task будет без точки, иначе будет вызван один из подконтроллеров каталога controllers
  *
- * @package     Joomla.Administrator
- * @subpackage  com_orangeei
+ * Подконтроллеры обычно наследуют либо JControllerForm (для форм редактирования), либо JControllerAdmin (остальные задачи)
+ * Для них существуют модели соответсствующих типов, правда названы как-то уебищно
  */
 class OrangeEIController extends JControllerLegacy
 {

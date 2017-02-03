@@ -9,9 +9,10 @@
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
  
-class OrangeEIControllerOrangeEI extends JControllerForm
+class OrangeEIControllerImport extends JControllerForm
 {
-	function import (  ) {
-		echo "Import";
+	public function display ( $cachable = false, $urlparams = false ) {
+		
+		$this->setRedirect(JRoute::_('index.php?option=com_orangeei&view=import', false) );
 	}
 }

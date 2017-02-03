@@ -33,13 +33,16 @@ class OrangeEIViewOrangeEIs extends JViewLegacy
 	}
 	
 	/*
+		* smart-comment
 		Другие полезные функции которые можно назначить кнопочкам в тулбаре админпанели смотрим в
 		\administrator\includes\toolbar.php
+		* Здесь мы, какбы, говорим, какие кнопки нужно поместить на панели (система сама их нарисует) и какие контроллеры должны их обрабатывать. При этом задачи add и edit в соответствующем суперконтроллере уже есть и чтобы они корректно сработали нужно только корректно реализовать соответствующие модели
 	*/
 	protected function addToolBar (  ) {
 		JToolBarHelper::title(JText::_('COM_ORANGEEI_MANAGER_ORANGEEIS'));
 		JToolBarHelper::addNew('orangeei.add');
 		JToolBarHelper::editList('orangeei.edit');
+		JToolBarHelper::custom('import.display', null, null, "Im", false);
 		JToolBarHelper::deleteList('', 'orangeeis.delete');
 	}
 }

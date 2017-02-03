@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<!-- Типы полей смотрим в https://docs.joomla.org/Standard_form_field_types -->
+		<field
+				name="id"
+				type="hidden"
+				/>
+		<field
+				name="send_email"
+				type="checkbox"
+				label="COM_ORANGEEI_ORANGEIMPORTRESULT_SENDE_LABEL"
+				description="COM_ORANGEEI_ORANGEIMPORTRESULT_SENDE_DESC"
+				value="1" default="0"
+				/>
+		<field
+				name="comment"
+				type="text"
+				label="COM_ORANGEEI_ORANGEIMPORTRESULT_COMMENT_LABEL"
+				description="COM_ORANGEEI_ORANGEIMPORTRESULT_COMMENT_DESC"
+				size="128"
+				class="inputbox"
+				default=""
+				/>
+	</fieldset>
+</form>

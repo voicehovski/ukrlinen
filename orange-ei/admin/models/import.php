@@ -10,13 +10,8 @@
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 
-/**
- * smart-comment
- * Базовые классы моделей находятся в директории \libraries\legacy\model
- *
- * Насколько я понял, если нужно что-то сохранить, удолить, выполнить, то используем этот суперкласс (а разве нет JModelForm?), а для вывода списка JModelList
- */
-class OrangeEIModelOrangeEI extends JModelAdmin
+
+class OrangeEIModelImport extends JModelAdmin
 {
 	/**
 	 * smart-comment
@@ -55,11 +50,11 @@ class OrangeEIModelOrangeEI extends JModelAdmin
 		// Первый аргумент, видимо, имя компонента и модели, исползующей данную форму, второй - имя xml-файла формы (вроде можно передавать и тупо xml-код) Формы (то есть xml-описания) оно ищет в папке forms
 		// Использует статический метод JForm::getInstance класса JForm из файла \libraries\joomla\form\form.php
 		$form = $this->loadForm(
-			'com_orangeei.orangeei',
-			'orangeei',
+			'com_orangeei.import',
+			'import',
 			array(
 				'control' => 'jform',
-				'load_data' => $loadData
+				'load_data' => false
 			)
 		);
  
@@ -70,27 +65,8 @@ class OrangeEIModelOrangeEI extends JModelAdmin
  
 		return $form;
 	}
- 
-	/**
-	 * Метод возвращает данные которые должны быть вставлены в форму
-	 *
-	 * Унаследован от суперкласса
-	 *
-	 * Используется системой где-то в недрах кода, возможно в loadForm
-	 */
-	protected function loadFormData()
-	{
-		// Check the session for previously entered form data.
-		$data = JFactory::getApplication()->getUserState(
-			'com_orangeei.edit.orangeei.data',
-			array()
-		);
- 
-		if (empty($data))
-		{
-			$data = $this->getItem();
-		}
- 
-		return $data;
+	
+	public function getSmth (  ) {
+		return "smth data";
 	}
 }
